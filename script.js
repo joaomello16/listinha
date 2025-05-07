@@ -3,6 +3,7 @@ const tarefas = ['tarefa-1','tarefa-2','tarefa3']
 function add(){
     const input = document.querySelector('input')
     const tarefa = input.value
+    if(tarefa.trim() === '') return
     tarefas.push(tarefa)
     input.value = ''
     render()  
@@ -12,11 +13,11 @@ function add(){
 function render(){
   const ul = document.querySelector('ul')
     ul.innerHTML = null
-  tarefas.forEach(function (i){
+  for (t of tarefas){
     const li = document.createElement('li')
-    li.innerText = i
+    li.innerText = t
     ul.appendChild(li)
-  })
+  }
 
     
 }
