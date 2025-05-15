@@ -60,6 +60,9 @@ button{
     color: red;
     cursor: pointer;
 }
+button:hover{
+    background-color: rgb(255, 0, 0, 0.1);
+}
 ul{
     margin-top: 15px;
     width: 80%;
