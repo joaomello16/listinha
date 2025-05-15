@@ -25,9 +25,7 @@ function render(){
 
     const button = document.createElement('button')
     button.innerHTML = '<i class="fa-regular fa-trash-can"></i>'
-    button.onclick = function(){
-      remove()
-    }
+    button.onclick(function())
     li.appendChild(button)
 
   })
