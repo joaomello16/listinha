@@ -20,7 +20,8 @@ header{
     text-align: center;
     width: 80%;
     border-radius: 5px;
-    box-shadow: 6px 5px 3px 0px gray;
+    box-shadow: 6px 5px 5px 0px gray;
+    border: 1px solid black;
 }
 h1{
     padding: 15px;
@@ -35,7 +36,7 @@ input{
     padding: 15px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid rgb(128, 128, 128, 0.5);
+    border: 1px solid black;
     font-size: 15px;
 }
 .botao{
@@ -53,13 +54,14 @@ input{
     background-color: rgb(0, 0, 255, 0.1);
     border-radius: 5px;
 }
-button{
+.btns{
     border: none;
     background: none;
-    width: 20%;
     font-size: 20px;
     color: red;
     cursor: pointer;
+    border-radius: 50%;
+    
 }
 button:hover{
     background-color: rgb(255, 0, 0, 0.1);
@@ -75,9 +77,19 @@ li{
     background-color: white;
     margin-top: 20px;
     padding: 20px;
-    box-shadow: 5px 5px 1px rgb(128, 128, 128, 0.5);
+    box-shadow: 5px 5px 5px gray;
     border-radius: 5px;
     font-size: 20px;
+    border: 1px solid black;
+    font-size: 25px;
+}
+
+.section1{
+    display: flex;
+    column-gap: 15px;
+}
+.checkbox{
+    width: 20px;
 }
 
 
