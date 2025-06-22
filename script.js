@@ -1,5 +1,5 @@
 
-const tarefas = []
+const tarefas = JSON.parse(localStorage.getItem('tarefas'))
 
 function add(){
   const input = document.querySelector('input')
@@ -8,8 +8,14 @@ function add(){
   tarefas.push(tarefa)
   console.log(tarefas)
   input.value = ''
+  salvar()
   render()
 }
+
+function salvar(){
+  localStorage.setItem('tarefas', JSON.stringify(tarefas))
+}
+
 function render(){
   const ul = document.querySelector('ul')
   ul.innerHTML = null
@@ -18,10 +24,12 @@ function render(){
     const button = document.createElement('button')
 
     button.innerHTML = 'Excluir'
+    button.className = 'btnExcluir'
     li.innerText = t
 
     button.onclick = function(){
       tarefas.splice(index, 1)
+      salvar()
       render()
     }
 
@@ -29,3 +37,4 @@ function render(){
     li.appendChild(button)
   })
 }
+render()
